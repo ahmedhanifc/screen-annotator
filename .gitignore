@@ -1,0 +1,20 @@
+# --- Bundled third-party clone (has its own .git; not part of this project) ---
+Satty/
+
+# --- Editor / tooling local state ---
+.claude/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.venv/
+venv/
+
+# --- OS cruft ---
+.DS_Store
+Thumbs.db
