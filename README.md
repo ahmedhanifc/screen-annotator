@@ -32,11 +32,6 @@ screen-annotator
   * it starts the overlay, or quits it if it is already running
   * on Windows, use an [AutoHotkey](https://www.autohotkey.com/) line: `#a::Run, screen-annotator`
 
-## Use Cases
-- Annotation while reading books / web pages.
-- Explaining something during meetings.
-- Screen Recording for youtube videos or streams.
-- Moreee
 
 ## Credits
 
