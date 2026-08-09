@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "screen-annotator"
+version = "1.0.0"
+description = "A live, click-through pen overlay for annotating the whole screen (Linux/X11 + Windows)."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Ahmed Hanif" }]
+keywords = ["annotation", "overlay", "screen", "drawing", "presentation", "study"]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Environment :: X11 Applications :: Qt",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "PyQt6>=6.6",
+    "python-xlib>=0.33; sys_platform == 'linux'",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+# Build-time only (freezing the standalone binary); not needed to run the app.
+build = ["pyinstaller>=6"]
+
+[project.urls]
+Homepage = "https://github.com/ahmedhanifc/screen-annotator"
+Repository = "https://github.com/ahmedhanifc/screen-annotator"
+
+[project.scripts]
+screen-annotator = "screen_annotator.app:main"
+
+[tool.setuptools.packages.find]
+include = ["screen_annotator*"]
+
+[tool.setuptools.package-data]
+screen_annotator = ["assets/*.ico", "assets/*.png", "assets/*.ttf", "assets/*.txt"]
